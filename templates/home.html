@@ -1,50 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ride Booking Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ride Booking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+
+background:linear-gradient(-45deg,#000428,#004e92,#0f2027,#2c5364);
+
+background-size:400% 400%;
+
+animation:bg 12s ease infinite;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+.container{
+
+width:420px;
+
+padding:40px;
+
+background:rgba(255,255,255,.12);
+
+-webkit-backdrop-filter:blur(15px);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+text-align:center;
+
+animation:popup .8s ease;
+
+}
+
+@keyframes popup{
+
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.car{
+
+font-size:70px;
+
+animation:float 2s infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+
+}
+
+h1{
+
+color:white;
+
+margin:20px 0;
+
+font-size:32px;
+
+}
+
+p{
+
+color:#ddd;
+
+line-height:28px;
+
+margin-bottom:30px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 45px;
+
+background:#00C853;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 12px 35px rgba(0,200,83,.5);
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <div class="container">
-        <h1>Welcome to the Ride Booking Service</h1>
-        <p>Book your ride with us and enjoy a seamless experience!</p>
-        <a href="/book" class="button">Book a Ride</a>
-    </div>
+
+<div class="container">
+
+<div class="car">🚖</div>
+
+<h1>Book Your Ride</h1>
+
+<p>
+Ride anywhere with comfort and safety.
+Choose your destination and we'll find
+the nearest driver instantly.
+</p>
+
+<a href="/book" class="btn">
+Book Ride
+</a>
+
+</div>
+
 </body>
 </html>
